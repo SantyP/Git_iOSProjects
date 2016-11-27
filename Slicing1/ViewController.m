@@ -21,13 +21,11 @@
 
 - (IBAction)buttonAction:(id)sender {
     
-    UIAlertController *alert = [[UIAlertController alloc] init];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Button clicked!" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     
-    [alert addAction:okAction];
+    [alert addAction:cancelAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
